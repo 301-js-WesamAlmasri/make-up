@@ -1,0 +1,12 @@
+<%- include('../layout/header.ejs') %> 
+<div class="container">
+    <% products.forEach((product) => { %> 
+        <div class="product_card">
+            <img src="<%= product.image %> " alt="">
+            <h2><%= product.name %> </h2>
+            <p>Price: <%= product.price %> $</p>
+            <p><%= product.description %> </p>
+        </div>
+    <% }) %> 
+</div>
+<%- include('../layout/footer.ejs') %> 

@@ -1,0 +1,25 @@
+<%- include('../layout/header.ejs') %> 
+<div class="container">
+    <div class="product_card">
+        <img src="<%= product.image %> " alt="">
+        <h2><%= product.name %> </h2>
+        <p>Price: <%= product.price %> $</p>
+        <p><%= product.description %> $</p>
+        <button id="update_btn">Update</button>
+        <form action="/product/<%= product.id %>?_method=delete" method="post">
+            <button type="submit" >Delete</button>
+        </form>
+    </div>
+    <form action="/product/<%= product.id %>?_method=put" method="post">
+        <label for="">Image Url</label>
+        <input type="text" name="image" value="<%= product.image %>">
+        <label for=""> Product name</label>
+        <input type="text" name="name" value="<%= product.name %>">
+        <label for="">Price</label>
+        <input type="text" name="price" value="<%= product.price %>">
+        <label for="">Description</label>
+        <textarea type="text" name="description" ><%= product.description %></textarea>
+        <input type="submit" value="Save">
+    </form>
+</div>
+<%- include('../layout/footer.ejs') %> 

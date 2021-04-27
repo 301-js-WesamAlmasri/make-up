@@ -1,0 +1,10 @@
+<%- include('../layout/header.ejs') %> 
+<div class="container">
+    <form action="/getresult" method="post">
+        <input type="text" name="brand" id="brand" placeholder="brand" value="maybelline">
+        <input type="number" name="from" id="from" placeholder="Price grater than">
+        <input type="number" name="to" id="to" placeholder="Price lower than">
+        <input type="submit" value="GET">
+    </form>
+</div>
+<%- include('../layout/footer.ejs') %> 

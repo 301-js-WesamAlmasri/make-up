@@ -1,0 +1,19 @@
+<%- include('../layout/header.ejs') %> 
+<div class="container">
+    <% products.forEach((product) => { %> 
+        <div class="product_card">
+            <img src="<%= product.image %> " alt="">
+            <h2><%= product.name %> </h2>
+            <p>Price: <%= product.price %> $</p>
+            <p><%= product.description %> </p>
+            <form action="/add" method="post">
+                <input type="hidden" name="image" value="<%= product.image %>">
+                <input type="hidden" name="name" value="<%= product.name %>">
+                <input type="hidden" name="price" value="<%= product.price %>">
+                <input type="hidden" name="description" value="<%= product.description %>">
+                <input type="submit" value="Add to cart">
+            </form>
+        </div>
+    <% }) %> 
+</div>
+<%- include('../layout/footer.ejs') %> 

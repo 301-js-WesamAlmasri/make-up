@@ -1,0 +1,16 @@
+<%- include('../layout/header.ejs') %> 
+<div class="container">
+    <% if(products.length > 0) { %> 
+        <% products.forEach((product) => { %> 
+            <div class="product_card">
+                <img src="<%= product.image %> " alt="">
+                <h2><%= product.name %> </h2>
+                <p>Price: <%= product.price %> $</p>
+                <a href="/product/<%= product.id %> ">Product Details</a>
+            </div>
+        <% }) %> 
+    <% }else{ %> 
+        <h1>No Products in Your Card </h1>
+    <% } %> 
+</div>
+<%- include('../layout/footer.ejs') %> 
