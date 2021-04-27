@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+header, main, footer {
+    width: 100%;
+}
+
+header {
+    background-color: rgb(58, 57, 57);
+    padding: 20px 20px;
+}
+
+footer {
+    background-color: rgb(58, 57, 57);
+    color: white;
+    font-weight: 700;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+li a {
+    color: white;
+    font-weight: 700;
+    padding: 15px 20px;
+}
+
+li a:hover {
+    background-color: grey;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.home_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_container h2 {
+    margin: 50px 0;
+}
+
+.home_container form input {
+    height: 50px;
+}
+
+.home_container form input[type="submit"] {
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    width: 50px;
+}
+
+.result_container, .cart_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.product_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 300px;
+    height: 800px;
+    border: 1px solid grey;
+    padding: 20px;
+    margin: 10px;
+    border-left: 10px solid palevioletred;
+    -webkit-box-shadow: 5px 5px 15px -5px #000000; 
+    box-shadow: 5px 5px 15px -5px #000000;
+    position: relative;
+}
+
+.product_card h2 {
+    color: palevioletred;
+}
+
+.product_card>* {
+    margin-bottom: 20px;
+}
+
+.product_card input[type="submit"] {
+    height: 50px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    bottom: 20px;
+    line-height: 1.5;
+}
+
+
+.all_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.cart_container .product_card {
+    height: 500px;
+}
+
+.cart_container .product_card a {
+    padding: 10px 30px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    bottom: 20px;
+    line-height: 1.5;
+    margin-top: 30px;
+}
