@@ -1,16 +1,19 @@
 <%- include('../layout/header.ejs') %> 
-<div class="container">
+<h2>Product Details For <%= product.name %> </h2>
+<div class="product_container">
     <div class="product_card">
         <img src="<%= product.image %> " alt="">
         <h2><%= product.name %> </h2>
         <p>Price: <%= product.price %> $</p>
         <p><%= product.description %> $</p>
-        <button id="update_btn">Update</button>
-        <form action="/product/<%= product.id %>?_method=delete" method="post">
-            <button type="submit" >Delete</button>
-        </form>
+        <div class="btn_container">
+            <button id="update_btn">Update</button>
+            <form action="/product/<%= product.id %>?_method=delete" method="post">
+                <button type="submit" >Delete</button>
+            </form>
+        </div>
     </div>
-    <form action="/product/<%= product.id %>?_method=put" method="post">
+    <form class="update_form" id="update_form" action="/product/<%= product.id %>?_method=put" method="post">
         <label for="">Image Url</label>
         <input type="text" name="image" value="<%= product.image %>">
         <label for=""> Product name</label>
@@ -19,7 +22,7 @@
         <input type="text" name="price" value="<%= product.price %>">
         <label for="">Description</label>
         <textarea type="text" name="description" ><%= product.description %></textarea>
-        <input type="submit" value="Save">
+        <button type="submit">Save</button>
     </form>
 </div>
 <%- include('../layout/footer.ejs') %> 

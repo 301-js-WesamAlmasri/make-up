@@ -130,7 +130,7 @@ main {
 }
 
 
-.all_container {
+.all_container, .product_container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -152,4 +152,61 @@ main {
     bottom: 20px;
     line-height: 1.5;
     margin-top: 30px;
+}
+
+.product_container {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+.product_container .product_card {
+    max-width: 80%;
+    height: auto;
+    align-self: center;
+}
+
+.btn_container {
+    display: flex;
+}
+
+.btn_container>* {
+    margin: 20px;
+}
+
+.product_container button{
+    height: 50px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    bottom: 20px;
+    line-height: 1.5;
+}
+
+.update_form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    padding: 10px;
+    justify-content: center;
+    align-self: center;
+    width: 80%;
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 15px -5px #000000; 
+    box-shadow: 5px 5px 15px -5px #000000;
+}
+
+.update_form>* {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.update_form textarea{
+    min-height: 300px;
+}
+
+#update_form{
+    display: none;
 }
